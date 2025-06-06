@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Protegé tu Pyme | Ciberseguridad para PYMES y Emprendedores</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function seleccionarPlan(plan) {
+        document.querySelector('textarea[name="message"]').value = `Hola, estoy interesado en el ${plan}. Por favor, contáctenme.`;
+        document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
   </head>
   <body class="bg-gray-100 text-gray-800">
     <!-- Hero Section -->
@@ -65,7 +71,7 @@
             <li>✔ Correos configurados con seguridad mínima</li>
             <li>✔ 1 hora de capacitación</li>
           </ul>
-          <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Elegir plan</a>
+          <button onclick="seleccionarPlan('Plan Básico')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Elegir plan</button>
         </div>
 
         <!-- Intermedio -->
@@ -78,7 +84,7 @@
             <li>✔ Análisis web + backups</li>
             <li>✔ 2 horas de capacitación práctica</li>
           </ul>
-          <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Elegir plan</a>
+          <button onclick="seleccionarPlan('Plan Intermedio')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Elegir plan</button>
         </div>
 
         <!-- Profesional -->
@@ -91,7 +97,7 @@
             <li>✔ Refuerzo completo del sitio web</li>
             <li>✔ Capacitación extendida + guía PDF</li>
           </ul>
-          <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Elegir plan</a>
+          <button onclick="seleccionarPlan('Plan Profesional')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Elegir plan</button>
         </div>
       </div>
     </section>
