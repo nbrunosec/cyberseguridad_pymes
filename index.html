@@ -99,10 +99,15 @@
     <!-- Contacto -->
     <section class="py-12 px-6" id="contacto">
       <h2 class="text-3xl text-center font-bold mb-8">¿Querés que te contactemos?</h2>
-      <form class="max-w-xl mx-auto bg-white p-6 rounded shadow grid gap-4">
-        <input type="text" placeholder="Nombre" class="p-3 border rounded w-full" />
-        <input type="email" placeholder="Email" class="p-3 border rounded w-full" />
-        <textarea placeholder="¿En qué te podemos ayudar?" class="p-3 border rounded w-full"></textarea>
+      <form action="https://formspree.io/f/xqabeben" method="POST" class="max-w-xl mx-auto bg-white p-6 rounded shadow grid gap-4">
+        <label class="text-sm font-semibold">
+          Tu email:
+          <input type="email" name="email" required class="p-3 border rounded w-full" />
+        </label>
+        <label class="text-sm font-semibold">
+          Tu mensaje:
+          <textarea name="message" required class="p-3 border rounded w-full"></textarea>
+        </label>
         <button type="submit" class="bg-blue-600 text-white py-3 rounded hover:bg-blue-700">Enviar consulta</button>
       </form>
     </section>
