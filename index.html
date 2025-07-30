@@ -161,5 +161,28 @@
     <footer class="text-center text-sm text-gray-600 py-6">
       &copy; 2025 Ciberseguridad PyME - Buenos Aires, Argentina
     </footer>
+    <style>
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+<script>
+  // Desactiva clic derecho
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // Desactiva F12, Ctrl+Shift+I, Ctrl+U
+  document.onkeydown = function(e) {
+    if (
+      e.keyCode == 123 || // F12
+      (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || // Ctrl+Shift+I/J
+      (e.ctrlKey && e.keyCode == 85) // Ctrl+U
+    ) {
+      return false;
+    }
+  };
+</script>
   </body>
 </html>
